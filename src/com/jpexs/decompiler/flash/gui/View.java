@@ -523,7 +523,8 @@ public class View {
     }
 
     public static ImageIcon getIcon(String name) {
-        return new ImageIcon(View.class.getClassLoader().getResource("com/jpexs/decompiler/flash/gui/graphics/" + name + ".png"));
+        String path = "com/jpexs/decompiler/flash/gui/graphics/" + name + ".png";
+        return new ImageIcon(View.class.getClassLoader().getResource(path));
     }
 
     private static final KeyStroke escapeStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0);
