@@ -47,7 +47,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.WeakHashMap;
 
 /**
  * Indexing of ABCs for faster access. Indexes ABC classes for faster class and
@@ -1104,6 +1103,9 @@ public final class AbcIndexing {
      */
     protected void indexTraits(ABC abc, int name_index, Traits ts, Map<PropertyDef, TraitIndex> map, Map<PropertyNsDef, TraitIndex> mapNs, Map<AmbiguousPropertyDef, List<TraitIndex>> mapAmbiguous, int scriptIndex) {        
         for (Trait t : ts.traits) {
+            if (t.deleted) {
+                continue;
+            }
             ValueKind propValue = null;
             if (t instanceof TraitSlotConst) {
                 TraitSlotConst tsc = (TraitSlotConst) t;
@@ -1233,6 +1235,9 @@ public final class AbcIndexing {
             indexTraits(abc, 0, abc.script_info.get(i).traits, null, scriptProperties, scriptAmbiguousProperties, i);
             for (int t = 0; t < abc.script_info.get(i).traits.traits.size(); t++) {
                 Trait tr = abc.script_info.get(i).traits.traits.get(t);
+                if (tr.deleted) {
+                    continue;
+                }
                 if (tr instanceof TraitClass) {
                     TraitClass tc = (TraitClass) tr;
                     InstanceInfo ii = abc.instance_info.get(tc.class_info);
