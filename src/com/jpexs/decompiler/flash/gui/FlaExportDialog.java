@@ -18,9 +18,6 @@ package com.jpexs.decompiler.flash.gui;
 
 import com.jpexs.decompiler.flash.SWF;
 import com.jpexs.decompiler.flash.configuration.Configuration;
-import static com.jpexs.decompiler.flash.gui.AppDialog.CANCEL_OPTION;
-import static com.jpexs.decompiler.flash.gui.AppDialog.ERROR_OPTION;
-import static com.jpexs.decompiler.flash.gui.AppDialog.OK_OPTION;
 import com.jpexs.decompiler.flash.xfl.FLAVersion;
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -28,7 +25,6 @@ import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListCellRenderer;
@@ -137,7 +133,7 @@ public class FlaExportDialog extends AppDialog {
 
         @Override
         public String toString() {
-            return flaVersion.applicationName() + " " + (recommended ? translate("recommended"): "");
+            return flaVersion.applicationName() + " " + (recommended ? translate("recommended") : "");
         }                
     }
     
