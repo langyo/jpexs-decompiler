@@ -118,6 +118,10 @@ public class LosslessImageBinDataReader {
                     g = (int) Math.floor(g * 256f / a);
                     b = (int) Math.floor(b * 256f / a);
                 }
+                
+                if (!hasAlpha) {
+                    a = 0xFF;
+                }
 
                 int rgba = r + (g << 8) + (b << 16) + (a << 24);
                 img.setRGB(x, y, rgba);
@@ -143,9 +147,9 @@ public class LosslessImageBinDataReader {
     }
 
     public static void main(String[] args) throws IOException {
-        File f = new File("in.bin");
+        File f = new File("c:\\Dropbox\\Programovani\\JavaSE\\FlaComDoc\\out\\media\\M 6 1776533974.dat");
         LosslessImageBinDataReader r = new LosslessImageBinDataReader(new FileInputStream(f));
         BufferedImage i = r.readImage();
-        ImageIO.write(i, "PNG", new File("out.png"));
+        ImageIO.write(i, "PNG", new File("c:\\Dropbox\\Programovani\\JavaSE\\FlaComDoc\\out\\media\\out.png"));
     }
 }
