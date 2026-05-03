@@ -521,7 +521,7 @@ public class ExportDialog extends AppDialog {
 
                 String key = optionNames[i] + "." + vals[j].toString().toLowerCase(Locale.ENGLISH);
                 if (exportFormats.contains(key)) {
-                    itemIndex = j;
+                    itemIndex = namesList.size();
                 }
 
                 namesList.add(new ComboValue(vals[j], translate(key)));
