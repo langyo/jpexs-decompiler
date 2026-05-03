@@ -185,16 +185,22 @@ public class DocumentSearchData {
 		int start = -1;
 		int end = -1;
                 int occurrenceNumber = 0; //JPEXS
+                boolean gotoLast = false; //JPEXS
 		while (matcher.find()) {
-			if (matcher.end() >= dot) {
-				break;
+			if (!gotoLast //JPEXS
+                                && matcher.end() > dot /* JPEXS: changed from >= */) {
+                                if (end == -1 && isWrap()) { //JPEXS
+                                    gotoLast = true; //JPEXS
+                                } else {                                    
+                                    break;
+                                }				
 			}
                         occurrenceNumber++;
 			start = matcher.start();
 			end = matcher.end();
 		}
 		if (end > 0) {
-			target.select(start, end);
+                        target.select(start, end);
                         currentOccurrenceMap.put(target, occurrenceNumber);
 			return true;
 		} else {
