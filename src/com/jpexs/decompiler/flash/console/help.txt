@@ -488,10 +488,6 @@ Pre-options:
     Applies to: -replace, -importScript
     Use AIR ("airglobal.swc") for AS3 compilation instead of "playerglobal.swc".
 
--resamplewav
-    Applies to: -export
-    Enables resampling exported WAV sound files to 44kHz.
-
 -ignorebackground
     Applies to: -export
     Ignores SWF background color when exporting frames
