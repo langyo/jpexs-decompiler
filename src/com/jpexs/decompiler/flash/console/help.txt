@@ -376,7 +376,8 @@ Pre-options:
         font:woff - WOFF format for Fonts
         font4:cff - CFF format for DefineFont4
         fla:<flaversion> or xfl:<flaversion> - Specify FLA format version
-    Values for <flaversion>: f5,mx,mx2004,f8,cs3,cs4,cs5,cs5.5,cs6,cc
+    Values for <flaversion>:
+        f1,f2,f3,f4,f5,mx,mx2004,f8,cs3,cs4,cs5,cs5.5,cs6,cc
     You can set multiple formats at once using comma (,)
     DO NOT PUT space between comma (,) and next value.
     The prefix with colon (:) is necessary.
