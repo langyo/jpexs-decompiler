@@ -1355,15 +1355,22 @@ public class DefineEditTextTag extends TextTag {
         }
         if (hasText) {
             List<TEXTRECORD> allTextRecords = getTextRecords(swf, normalizedFonts);
+            
+            MATRIX textMatrix = new MATRIX();
+            
+            int borderPadding = 40;
+            textMatrix.translateX = bounds.Xmin + borderPadding;
+            textMatrix.translateY = bounds.Ymin + borderPadding;
+            
             switch (renderMode) {
                 case BITMAP:
-                    staticTextToImage(swf, allTextRecords, 2, image, getTextMatrix(), transformation, colorTransform, selectionStart, selectionEnd, aaScale);
+                    staticTextToImage(swf, allTextRecords, 2, image, textMatrix, transformation, colorTransform, selectionStart, selectionEnd, aaScale);
                     break;
                 case HTML5_CANVAS:
-                    staticTextToHtmlCanvas(zoom, swf, allTextRecords, 2, htmlCanvasBuilder, getBounds(), getTextMatrix(), colorTransform);
+                    staticTextToHtmlCanvas(zoom, swf, allTextRecords, 2, htmlCanvasBuilder, getBounds(), textMatrix, colorTransform);
                     break;
                 case SVG:
-                    staticTextToSVG(swf, allTextRecords, 2, svgExporter, getBounds(), getTextMatrix(), colorTransform, zoom, transformation);
+                    staticTextToSVG(swf, allTextRecords, 2, svgExporter, getBounds(), textMatrix, colorTransform, zoom, transformation);
                     break;
             }
         }
