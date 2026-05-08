@@ -133,7 +133,7 @@ public class TextTypeConverter {
         List<Integer> leftMargins = (List<Integer>) attrs.get("allLeftMargins");
         @SuppressWarnings("unchecked")
         List<Integer> letterSpacings = (List<Integer>) attrs.get("allLetterSpacings");
-
+       
         det.bounds = new RECT(tag.getBounds());
         det.wasStatic = true;
         det.noSelect = true;
@@ -151,6 +151,7 @@ public class TextTypeConverter {
         writer.setMakeNewLines(false);
         RGBA firstTextColor = new RGBA(Color.BLACK);   
         int firstFontId = -1;
+        int firstTextHeight = -1;
         try {
             int fontId;
             FontTag font = null;
@@ -195,6 +196,7 @@ public class TextTypeConverter {
                     }
                     if (r == 0) {
                         firstFontId = fontId;
+                        firstTextHeight = textHeight;
                     }
                 }
                 newline = false;
@@ -245,6 +247,7 @@ public class TextTypeConverter {
         if (firstFontId > -1) {
             det.hasFont = true;
             det.fontId = firstFontId;
+            det.fontHeight = firstTextHeight;
         }
         
         ExportRectangle bounds = det.calculateTextBounds();
