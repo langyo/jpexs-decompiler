@@ -273,10 +273,15 @@ public class AS3Package extends AS3ClassTreeItem {
      *
      * @param script ScriptPack
      */
-    public void addScriptPack(ScriptPack script) {        
-        /*ClassPath cp = script.getClassPath();
-        scripts.put(cp.className + cp.namespaceSuffix, script);*/
-        scripts.put(script.getPrintableNameWithNamespaceSuffix(), script);
+    public void addScriptPack(ScriptPack script) {    
+        int i = 1;
+        String baseKey = script.getPrintableNameWithNamespaceSuffix();
+        String key = baseKey;
+        while (scripts.containsKey(key)) {
+            i++;
+            key = baseKey + i;
+        }
+        scripts.put(key, script);
         sortedScripts = null;
     }
 

@@ -3165,25 +3165,22 @@ public final class SWF implements SWFContainerItem, Timelined, Openable {
     }
 
     /**
-     * Makes scriptpacks unique. Unique = no two packs with same classpath
+     * Checks scriptpacks whether they are unique. Unique = no two packs with same classpath
      * exist.
      *
      * @param packs List of ScriptPacks
      * @return List of unique ScriptPacks
      */
-    private List<ScriptPack> uniqueAS3Packs(List<ScriptPack> packs) {
-        List<ScriptPack> ret = new ArrayList<>();
+    private void checkUniqueAS3Packs(List<ScriptPack> packs) {
         Set<ClassPath> classPaths = new HashSet<>();
         for (ScriptPack item : packs) {
             ClassPath key = item.getClassPath();
             if (classPaths.contains(key) && item.isSimple) {
-                logger.log(Level.SEVERE, "Duplicate pack path found ({0})!", key);
+                logger.log(Level.WARNING, "Duplicate scriptpack path found ({0})!", key);
             } else {
-                classPaths.add(key);
-                ret.add(item);
+                classPaths.add(key);                
             }
-        }
-        return ret;
+        }        
     }
 
     /**
@@ -3205,7 +3202,8 @@ public final class SWF implements SWFContainerItem, Timelined, Openable {
         for (ABCContainerTag abcTag : abcList) {
             packs.addAll(abcTag.getABC().getScriptPacks(null, allAbcList));
         }
-        return uniqueAS3Packs(packs);
+        checkUniqueAS3Packs(packs);        
+        return packs;
     }
 
     /**
