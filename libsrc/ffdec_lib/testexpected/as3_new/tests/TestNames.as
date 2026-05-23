@@ -103,13 +103,13 @@ package tests
                      getlocal1
                      coerce QName(PackageNamespace(""),"Namespace")
                      getlocal2
-                     coerce_s
+                     convert_s
                      convert_s
                      findpropstrict RTQNameL()
                      getlocal1
                      coerce QName(PackageNamespace(""),"Namespace")
                      getlocal2
-                     coerce_s
+                     convert_s
                      convert_s
                      getproperty RTQNameL()
                      coerce_a

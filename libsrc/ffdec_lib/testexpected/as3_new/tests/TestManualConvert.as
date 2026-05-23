@@ -66,7 +66,7 @@ package tests
                      callpropvoid Multiname("trace",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),PrivateNamespace("tests:TestManualConvert"),ProtectedNamespace("tests:TestManualConvert"),StaticProtectedNs("tests:TestManualConvert"),PrivateNamespace("TestManualConvert.as$0")]), 1
                      findpropstrict Multiname("trace",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),PrivateNamespace("tests:TestManualConvert"),ProtectedNamespace("tests:TestManualConvert"),StaticProtectedNs("tests:TestManualConvert"),PrivateNamespace("TestManualConvert.as$0")])
                      getlocal0
-                     coerce_s
+                     convert_s
                      getproperty Multiname("length",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),PrivateNamespace("tests:TestManualConvert"),ProtectedNamespace("tests:TestManualConvert"),StaticProtectedNs("tests:TestManualConvert"),PrivateNamespace("TestManualConvert.as$0")])
                      callpropvoid Multiname("trace",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),PrivateNamespace("tests:TestManualConvert"),ProtectedNamespace("tests:TestManualConvert"),StaticProtectedNs("tests:TestManualConvert"),PrivateNamespace("TestManualConvert.as$0")]), 1
                      returnvoid

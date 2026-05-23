@@ -75,7 +75,7 @@ package tests
                      getproperty QName(PrivateNamespace("tests:TestStringCoerce"),"a")
                      pushstring "test"
                      getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),PrivateNamespace("tests:TestStringCoerce"),ProtectedNamespace("tests:TestStringCoerce"),StaticProtectedNs("tests:TestStringCoerce"),PrivateNamespace("TestStringCoerce.as$0")])
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal2
                      returnvoid

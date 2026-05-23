@@ -118,7 +118,7 @@ package tests
                      convert_i
                      setlocal 5
                      getlocal 5
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      getlocal0
@@ -133,7 +133,7 @@ package tests
             ofs0085:
                      getlocal2
             ofs0086:
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      getlocal2
@@ -143,7 +143,7 @@ package tests
                      jump ofs0098
             ofs0096:
                      getlocal2
-                     coerce_s
+                     convert_s
             ofs0098:
                      coerce_s
                      setlocal1
@@ -222,19 +222,19 @@ package tests
                      convert_i
                      setlocal2
                      getlex QName(ProtectedNamespace("tests_classes:TestConvertParent"),"prot")
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      getlex QName(StaticProtectedNs("tests_classes:TestConvertParent"),"sprot")
                      convert_i
                      setlocal2
                      getlex QName(StaticProtectedNs("tests_classes:TestConvertParent"),"sprot")
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      findpropstrict QName(PackageNamespace("flash.utils"),"getTimer")
                      callproperty QName(PackageNamespace("flash.utils"),"getTimer"), 0
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      getlex QName(PackageNamespace(""),"XML")
@@ -279,7 +279,7 @@ package tests
                      getlocal2
                      getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),StaticProtectedNs("tests_classes:TestConvertParent"),PrivateNamespace("tests:TestConvert"),ProtectedNamespace("tests:TestConvert"),StaticProtectedNs("tests:TestConvert"),PrivateNamespace("TestConvert.as$0")])
                      getproperty MultinameA("id",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),StaticProtectedNs("tests_classes:TestConvertParent"),PrivateNamespace("tests:TestConvert"),ProtectedNamespace("tests:TestConvert"),StaticProtectedNs("tests:TestConvert"),PrivateNamespace("TestConvert.as$0")])
-                     coerce_s
+                     convert_s
                      pushstring "Hello"
                      setproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),StaticProtectedNs("tests_classes:TestConvertParent"),PrivateNamespace("tests:TestConvert"),ProtectedNamespace("tests:TestConvert"),StaticProtectedNs("tests:TestConvert"),PrivateNamespace("TestConvert.as$0")])
                      findpropstrict QName(PrivateNamespace("TestConvert.as$0"),"LocalClass")
@@ -292,7 +292,7 @@ package tests
                      setlocal2
                      getlocal 10
                      getproperty Multiname("attr",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("tests"),PackageInternalNs("tests"),StaticProtectedNs("tests_classes:TestConvertParent"),PrivateNamespace("tests:TestConvert"),ProtectedNamespace("tests:TestConvert"),StaticProtectedNs("tests:TestConvert"),PrivateNamespace("TestConvert.as$0")])
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      getlocal0
@@ -370,7 +370,7 @@ package tests
                      setlocal2
                      findpropstrict QName(ProtectedNamespace("tests_classes:TestConvertParent"),"prot")
                      getsuper QName(ProtectedNamespace("tests_classes:TestConvertParent"),"prot")
-                     coerce_s
+                     convert_s
                      coerce_s
                      setlocal1
                      pushstring "5"
