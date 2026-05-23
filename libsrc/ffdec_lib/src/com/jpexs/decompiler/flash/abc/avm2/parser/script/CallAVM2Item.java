@@ -224,7 +224,7 @@ public class CallAVM2Item extends AVM2Item {
         }
 
         if (callable instanceof TypeItem && propIndex != -1 && arguments.size() == 1) {
-            AVM2Instruction ins = NameAVM2Item.generateCoerce(localData, generator, callable);            
+            AVM2Instruction ins = NameAVM2Item.generateConvert(localData, generator, callable);            
             if (ins != null) {
                 return toSourceMerge(localData, generator, arguments, ins);
             }

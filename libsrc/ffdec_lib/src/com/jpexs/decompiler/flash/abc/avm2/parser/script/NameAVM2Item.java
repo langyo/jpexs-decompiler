@@ -352,6 +352,45 @@ public class NameAVM2Item extends AssignableAVM2Item {
         }
         return ins;
     }
+    
+    /**
+     * Generates convert.
+     * @param localData Local data
+     * @param generator Generator
+     * @param ttype Target type
+     * @return Convert instruction
+     * @throws CompilationException On compilation error
+     */
+    public static AVM2Instruction generateConvert(SourceGeneratorLocalData localData, SourceGenerator generator, GraphTargetItem ttype) throws CompilationException {
+        if (ttype instanceof UnresolvedAVM2Item) {
+            ttype = ((UnresolvedAVM2Item) ttype).resolved;
+        }
+        AVM2Instruction ins = null;
+        switch (ttype.toString()) {
+            case "int":
+                ins = ins(AVM2Instructions.ConvertI);
+                break;                
+            case "String":
+                ins = ins(AVM2Instructions.ConvertS);
+                break;
+            case "Boolean":
+                ins = ins(AVM2Instructions.ConvertB);
+                break;
+            case "uint":
+                ins = ins(AVM2Instructions.ConvertU);
+                break;
+            case "Number":
+                ins = ins(AVM2Instructions.ConvertD);
+                break;
+            case "float":
+                ins = ins(AVM2Instructions.ConvertF);
+                break;
+            case "float4":
+                ins = ins(AVM2Instructions.ConvertF4);
+                break;
+        }
+        return ins;
+    }
 
     private List<GraphSourceItem> toSource(SourceGeneratorLocalData localData, SourceGenerator generator, boolean needsReturn) throws CompilationException {
         addTraitUsage(localData, localData.callStack);
