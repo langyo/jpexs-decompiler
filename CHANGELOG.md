@@ -1,6 +1,37 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [26.2.0] - 2026-05-24
+### Features
+- text tag convertor: set default color, fontId, hasLayout ([#2383])
+- fla export: add support for flash1 to flash4, fla export dialog
+- xml export: export only fields that meet conditions ([#2702])
+- add config for loading spinner ([PR258])
+- translator: add autosave on exit checkbox ([PR257])
+- text tag convertor: set text height
+- xml export: allow external as1/2 scripts, images and defineSounds ([#2707])
+- as3: allow display of duplicate classes, warn ([#2710], [#2254])
+
+### Bug Fixes
+- allow transparency in animated WEBP and APNG ([PR253])
+- correct handling hasFontClass text attribute ([#2692])
+- fix nightly update checking showing current version
+- correct stroke size on zoomed shapes msaa export ([#2696])
+- actionscript: fix loop after switch ([#2698])
+- fix tellTarget handling on old AS version
+- AS2 direct edit: fix register count in empty functions ([#2705])
+- ignore deleted traits on indexing ([PR256])
+- fix setSelectedIndex out of bounds on export dialog ([#2579])
+- jsyntaxpane: wrap in backwards direction in the quick find ([#2694])
+- fix text position calculation in DefineEditText
+- text tag convertor: fix text position ([#2383])
+- allow only safe classes on deserialization
+- msaa renderer: fix closing strokes
+- as3 direct edit: correct using convert_s instead of coerce_s ([#2717])
+- as3: correct named anonymous functions ([#2714])
+- as3 direct edit: correct protected property access on toplevel ([#2713])
+- as2: correct Decrement cast and guard empty output in ActionSetMember ([PR261])
+
 ## [26.1.0] - 2026-05-24
 ### Features
 - ui: redetect scale factor on each launch when not set in config ([PR260])
@@ -4068,6 +4099,7 @@ Major version of SWF to XML export changed to 2.
 ### Added
 - Initial public release
 
+[26.2.0]: https://github.com/jindrapetrik/jpexs-decompiler/compare/version26.1.0...version26.2.0
 [26.1.0]: https://github.com/jindrapetrik/jpexs-decompiler/compare/version26.0.0...version26.1.0
 [26.0.0]: https://github.com/jindrapetrik/jpexs-decompiler/compare/version25.1.3...version26.0.0
 [25.1.3]: https://github.com/jindrapetrik/jpexs-decompiler/compare/version25.1.2...version25.1.3
@@ -4249,12 +4281,25 @@ Major version of SWF to XML export changed to 2.
 [alpha 9]: https://github.com/jindrapetrik/jpexs-decompiler/compare/alpha8...alpha9
 [alpha 8]: https://github.com/jindrapetrik/jpexs-decompiler/compare/alpha7...alpha8
 [alpha 7]: https://github.com/jindrapetrik/jpexs-decompiler/releases/tag/alpha7
+[#2383]: https://www.free-decompiler.com/flash/issues/2383
+[#2702]: https://www.free-decompiler.com/flash/issues/2702
+[#2707]: https://www.free-decompiler.com/flash/issues/2707
+[#2710]: https://www.free-decompiler.com/flash/issues/2710
+[#2254]: https://www.free-decompiler.com/flash/issues/2254
+[#2692]: https://www.free-decompiler.com/flash/issues/2692
+[#2696]: https://www.free-decompiler.com/flash/issues/2696
+[#2698]: https://www.free-decompiler.com/flash/issues/2698
+[#2705]: https://www.free-decompiler.com/flash/issues/2705
+[#2579]: https://www.free-decompiler.com/flash/issues/2579
+[#2694]: https://www.free-decompiler.com/flash/issues/2694
+[#2717]: https://www.free-decompiler.com/flash/issues/2717
+[#2714]: https://www.free-decompiler.com/flash/issues/2714
+[#2713]: https://www.free-decompiler.com/flash/issues/2713
 [#2542]: https://www.free-decompiler.com/flash/issues/2542
 [#2674]: https://www.free-decompiler.com/flash/issues/2674
 [#2671]: https://www.free-decompiler.com/flash/issues/2671
 [#2670]: https://www.free-decompiler.com/flash/issues/2670
 [#2673]: https://www.free-decompiler.com/flash/issues/2673
-[#2383]: https://www.free-decompiler.com/flash/issues/2383
 [#251]: https://www.free-decompiler.com/flash/issues/251
 [#2656]: https://www.free-decompiler.com/flash/issues/2656
 [#2655]: https://www.free-decompiler.com/flash/issues/2655
@@ -5560,6 +5605,11 @@ Major version of SWF to XML export changed to 2.
 [#32]: https://www.free-decompiler.com/flash/issues/32
 [#31]: https://www.free-decompiler.com/flash/issues/31
 [#27]: https://www.free-decompiler.com/flash/issues/27
+[PR258]: https://github.com/jindrapetrik/jpexs-decompiler/pull/258
+[PR257]: https://github.com/jindrapetrik/jpexs-decompiler/pull/257
+[PR253]: https://github.com/jindrapetrik/jpexs-decompiler/pull/253
+[PR256]: https://github.com/jindrapetrik/jpexs-decompiler/pull/256
+[PR261]: https://github.com/jindrapetrik/jpexs-decompiler/pull/261
 [PR260]: https://github.com/jindrapetrik/jpexs-decompiler/pull/260
 [PR228]: https://github.com/jindrapetrik/jpexs-decompiler/pull/228
 [PR224]: https://github.com/jindrapetrik/jpexs-decompiler/pull/224

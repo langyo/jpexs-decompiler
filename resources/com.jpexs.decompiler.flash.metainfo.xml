@@ -67,6 +67,42 @@
 		</screenshot>
 	</screenshots>
 	<releases>
+		<release version="26.2.0" date="2026-05-24">
+			<description>
+				<p>Features</p>
+				<ul>
+					<li>text tag convertor: set default color, fontId, hasLayout (#2383)</li>
+					<li>fla export: add support for flash1 to flash4, fla export dialog</li>
+					<li>xml export: export only fields that meet conditions (#2702)</li>
+					<li>add config for loading spinner (PR258)</li>
+					<li>translator: add autosave on exit checkbox (PR257)</li>
+					<li>text tag convertor: set text height</li>
+					<li>xml export: allow external as1/2 scripts, images and defineSounds (#2707)</li>
+					<li>as3: allow display of duplicate classes, warn (#2710, #2254)</li>
+				</ul>
+				<p>Bug Fixes</p>
+				<ul>
+					<li>allow transparency in animated WEBP and APNG (PR253)</li>
+					<li>correct handling hasFontClass text attribute (#2692)</li>
+					<li>fix nightly update checking showing current version</li>
+					<li>correct stroke size on zoomed shapes msaa export (#2696)</li>
+					<li>actionscript: fix loop after switch (#2698)</li>
+					<li>fix tellTarget handling on old AS version</li>
+					<li>AS2 direct edit: fix register count in empty functions (#2705)</li>
+					<li>ignore deleted traits on indexing (PR256)</li>
+					<li>fix setSelectedIndex out of bounds on export dialog (#2579)</li>
+					<li>jsyntaxpane: wrap in backwards direction in the quick find (#2694)</li>
+					<li>fix text position calculation in DefineEditText</li>
+					<li>text tag convertor: fix text position (#2383)</li>
+					<li>allow only safe classes on deserialization</li>
+					<li>msaa renderer: fix closing strokes</li>
+					<li>as3 direct edit: correct using convert_s instead of coerce_s (#2717)</li>
+					<li>as3: correct named anonymous functions (#2714)</li>
+					<li>as3 direct edit: correct protected property access on toplevel (#2713)</li>
+					<li>as2: correct Decrement cast and guard empty output in ActionSetMember (PR261)</li>
+				</ul>
+			</description>
+		</release>
 		<release version="26.1.0" date="2026-05-24">
 			<description>
 				<p>Features</p>
